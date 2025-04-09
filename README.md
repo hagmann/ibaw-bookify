@@ -1,12 +1,63 @@
-# React + Vite
+# Buchfavoriten App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Eine einfache React-Anwendung zur Verwaltung deiner Lieblingsbücher. Mit dieser App kannst du Bücher durchsuchen, zu deinen Favoriten hinzufügen und deine Favoritenliste jederzeit einsehen.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Übersichtliche Darstellung von Büchern
+- Bücher als Favoriten speichern
+- Favoritenliste anzeigen
+- Responsive Design für alle Geräte
 
-## Expanding the ESLint configuration
+## Technologien
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- Vite als Build-Tool
+- React Context API für State-Management
+- React Router für Navigation
+- Moderne JavaScript ES6+ Features
+
+## Live Demo
+
+Schau dir die Live-Demo auf Vercel an: [Buchfavoriten App](https://buchfavoriten.vercel.app)
+
+## Installation
+
+So kannst du das Projekt lokal ausführen:
+
+```bash
+# Repository klonen
+git clone https://github.com/dein-username/buchfavoriten.git
+
+# In das Projektverzeichnis wechseln
+cd buchfavoriten
+
+# Abhängigkeiten installieren
+npm install
+
+# Entwicklungsserver starten
+npm run dev
+```
+
+Die App wird unter http://localhost:5173 verfügbar sein.
+
+## Projektstruktur
+
+```javascript
+buchfavoriten/
+├── src/
+│   ├── components/   # UI-Komponenten
+│   ├── context/      # React Context für State-Management
+│   ├── pages/        # Hauptseiten der App
+│   ├── App.jsx       # Hauptkomponente
+│   └── main.jsx      # Einstiegspunkt
+└── public/           # Statische Assets
+```
+
+## Beitragen
+
+Verbesserungsvorschläge und Pull Requests sind willkommen! Für größere Änderungen erstelle bitte zuerst ein Issue, um zu besprechen, was du ändern möchtest.
+
+
+
+Erstellt mit [Vite](https://vitejs.dev/) und viel ❤️
