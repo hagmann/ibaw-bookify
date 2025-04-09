@@ -1,6 +1,5 @@
 import { useState } from 'react';
-// GEÄNDERT: Import React Bootstrap Komponenten
-import { Form, InputGroup, Button } from 'react-bootstrap';
+import { Form, Button, InputGroup } from 'react-bootstrap';
 import { FaSearch } from 'react-icons/fa';
 
 function SearchBar({ onSearch }) {
@@ -13,7 +12,6 @@ function SearchBar({ onSearch }) {
     }
   };
 
-  // GEÄNDERT: Verwende React Bootstrap Form-Komponenten
   return (
     <div className="mb-4">
       <Form onSubmit={handleSubmit}>
@@ -23,6 +21,7 @@ function SearchBar({ onSearch }) {
             placeholder="Suche nach Buchtitel, Autor, ISBN..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
+            aria-label="Suchbegriff"
           />
           <Button variant="primary" type="submit">
             <FaSearch className="me-1" /> Suchen
