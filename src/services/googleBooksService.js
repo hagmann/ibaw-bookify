@@ -1,12 +1,13 @@
 // Basis-URL für die Google Books API
 const BASE_URL = "https://www.googleapis.com/books/v1/volumes";
+const API_KEY = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
+const API_KEY_PARAM = API_KEY ? `&key=${encodeURIComponent(API_KEY)}` : "";
 
 // Funktion zum Abrufen von Büchern basierend auf einem Suchbegriff
 export const searchGoogleBooks = async (query, maxResults = 20) => {
   try {
-    const response = await fetch(
-      `${BASE_URL}?q=${encodeURIComponent(query)}&maxResults=${maxResults}`
-    );
+    const url = `${BASE_URL}?q=${encodeURIComponent(query)}&maxResults=${maxResults}${API_KEY_PARAM}`;
+    const response = await fetch(url);
     
     if (!response.ok) {
       throw new Error(`API Error: ${response.status} ${response.statusText}`);
@@ -25,7 +26,8 @@ export const searchGoogleBooks = async (query, maxResults = 20) => {
 // Funktion zum Abrufen eines einzelnen Buchs anhand seiner ID
 export const getGoogleBookById = async (bookId) => {
   try {
-    const response = await fetch(`${BASE_URL}/${bookId}`);
+    const keyParam = API_KEY ? `?key=${encodeURIComponent(API_KEY)}` : "";
+    const response = await fetch(`${BASE_URL}/${bookId}${keyParam}`);
     
     if (!response.ok) {
       throw new Error(`API Error: ${response.status} ${response.statusText}`);
