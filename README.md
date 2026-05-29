@@ -19,7 +19,7 @@ Eine einfache React-Anwendung zur Verwaltung deiner Lieblingsbücher. Mit dieser
 
 ## Live Demo
 
-Schau dir die Live-Demo auf Vercel an: [Buchfavoriten App](https://buchfavoriten.vercel.app)
+Schau dir die Live-Demo auf Vercel an: [Buchfavoriten App](https://ibaw-bookify.vercel.app/)
 
 ## Installation
 
